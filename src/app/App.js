@@ -1,42 +1,27 @@
 import React from 'react';
+import { AllRecipes } from '../features/allRecipes/AllRecipes.js';
+import { SearchTerm } from '../features/searchTerm/SearchTerm.js';
+import { FavoriteRecipes } from '../features/favoriteRecipes/FavoriteRecipes.js';
 
-import { Inventory } from '../features/inventory/Inventory.js';
-import { CurrencyFilter } from '../features/currencyFilter/CurrencyFilter.js';
-import { Cart } from '../features/cart/Cart';
-import { SearchTerm } from '../features/searchTerm/SearchTerm';
-
-export const App = (props) => {
-
-  const { state, dispatch } = props;
-
+export function App() {
   return (
-    <div>
-      <CurrencyFilter
-        currencyFilter={state.currencyFilter}
-        dispatch={dispatch}
-      />
+    <main>
 
-      <SearchTerm
-        searchTerm={state.searchTerm}
-        dispatch={dispatch}
-      />
+      <section>
+        <SearchTerm />
+      </section>
 
-      <Inventory
-        inventory={getFilteredItems(state.inventory, state.searchTerm)}
-        currencyFilter={state.currencyFilter}
-        dispatch={dispatch}
-      />
+      <section>
+        <h2>Favorite Recipes</h2>
+        <FavoriteRecipes />
+      </section>
+      <hr />
 
-      <Cart
-        cart={state.cart}
-        currencyFilter={state.currencyFilter}
-        dispatch={dispatch}
-      />
-
-    </div>
-  );
-};
-
-function getFilteredItems(items, searchTerm) {
-  return items.filter(items => items.name.toLowerCase().includes(searchTerm.toLowerCase()));
+      <section>
+        <h2>All Recipes</h2>
+        <AllRecipes />
+      </section>
+      
+    </main>
+  )
 }

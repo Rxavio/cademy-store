@@ -1,10 +1,13 @@
-export const inventoryData = [
-    { name: 'Hello World Hat', price: 23.99, img: 'https://static-assets.codecademy.com/Courses/Learn-Redux/codecademy-store/hello-world-hat.jpg' },
-    { name: 'Learn From Home Joggers', price: 45.99, img: 'https://static-assets.codecademy.com/Courses/Learn-Redux/codecademy-store/sweatpants.jpg' },
-    { name: 'Java Tee', price: 17.99, img: 'https://static-assets.codecademy.com/Courses/Learn-Redux/codecademy-store/java-tee.jpg' },
-    { name: 'Python Tee', price: 17.99, img: 'https://static-assets.codecademy.com/Courses/Learn-Redux/codecademy-store/python-tee.jpg' },
-    { name: 'SQL Tee', price: 17.99, img: 'https://static-assets.codecademy.com/Courses/Learn-Redux/codecademy-store/sql-tee.jpg' },
-    { name: 'Hello World Hoodie', price: 49.99, img: 'https://static-assets.codecademy.com/Courses/Learn-Redux/codecademy-store/hoodie.jpg' },
-  ];
-  
-  export const currenciesData = ['USD', 'EUR', 'CAD'];
+const allRecipesData = [
+  { id: 0, name: 'Biscuits', img: 'img/house1.jpg'},
+  { id: 1, name: 'Bulgogi', img: 'img/house2.jpg'},
+  { id: 2, name: 'Calamari', img: 'img/house3.jpg'},
+  { id: 3, name: 'Ceviche', img: 'img/house4.jpg'},
+  { id: 4, name: 'Cheeseburger', img: 'img/house5.jpg'},
+  { id: 5, name: 'Churrasco', img: 'img/house6.jpg'},
+  { id: 6, name: 'Dumplings', img: 'img/house7.jpg'},
+  { id: 7, name: 'Fish & Chips', img: 'img/house8.jpg'},
+  { id: 8, name: 'Hummus', img: 'img/house9.jpg'},
+  { id: 9, name: 'Masala Dosa', img: 'img/house10.jpg'}
+];
+export default allRecipesData;

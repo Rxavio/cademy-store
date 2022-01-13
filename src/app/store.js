@@ -1,15 +1,10 @@
-// Import createStore and combineReducers here.
 import { createStore, combineReducers } from 'redux';
-// Import the slice reducers here.
-import { cartReducer } from '../features/cart/cartSlice';
-import { currencyFilterReducer } from '../features/currencyFilter/currencyFilterSlice';
-import { inventoryReducer } from '../features/inventory/inventorySlice';
-import { searchTermReducer } from '../features/searchTerm/searchTermSlice';
+import { favoriteRecipesReducer } from '../features/favoriteRecipes/favoriteRecipesSlice.js';
+import { searchTermReducer } from '../features/searchTerm/searchTermSlice.js';
+import { allRecipesReducer } from '../features/allRecipes/allRecipesSlice.js';
 
-// Create and export the store here.
 export const store = createStore(combineReducers({
-    cart: cartReducer,
-    currencyFilter: currencyFilterReducer,
-    inventory: inventoryReducer,
-    searchTerm: searchTermReducer
+  favoriteRecipes: favoriteRecipesReducer,
+  searchTerm: searchTermReducer,
+  allRecipes: allRecipesReducer
 }));
